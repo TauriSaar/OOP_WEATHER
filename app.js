@@ -35,4 +35,5 @@ function getWeather(){
         .catch(error => console.log(error))
 }
 
+
 getWeather()
