@@ -1,6 +1,10 @@
-// Weather object
+// LS object
+const  ls = new LS()
+// init city data
+const initCity = ls.getCity()
 
-const weather = new Weather('Tallinn')
+// Weather object
+const weather = new Weather(initCity)
 
 // UI object
 const ui = new UI()
@@ -14,6 +18,7 @@ function changeWeather(event){
     const city = document.querySelector('#city-name').value
     console.log(city)
     weather.changeCity(city)
+    ls.setCity(city)
     getWeather()
     document.querySelector('#city-name').value = ''
     event.preventDefault()
